@@ -121,7 +121,7 @@ function App() {
             )}
           </div>
 
-          <div className="todo-input-item">
+          <div style={{ display: "flex" }}>
             <button
               type="button"
               onClick={handleAddTodo}
@@ -148,6 +148,7 @@ function App() {
         </div>
 
         <div>
+        {isCompleteScreen === false && (
           <table className="table">
             <thead>
               <tr>
@@ -157,9 +158,8 @@ function App() {
               </tr>
             </thead>
 
-            <tbody>
-              {isCompleteScreen === false &&
-                allTodos.map((item, index) => (
+            <tbody>              
+                {allTodos.map((item, index) => (
                   <>
                     <tr key={index}>
                       <td>{item.title}</td>
@@ -181,9 +181,11 @@ function App() {
                 ))}
             </tbody>
           </table>
+        )}
         </div>
 
         <div>
+        {isCompleteScreen === true && (
           <table className="table">
             <thead>
               <tr>
@@ -194,9 +196,8 @@ function App() {
               </tr>
             </thead>
 
-            <tbody>
-              {isCompleteScreen === true &&
-                CompletedTodos.map((item, index) => (
+            <tbody>             
+                {CompletedTodos.map((item, index) => (
                   <>
                     <tr key={index}>
                       <td>{item.title}</td>
@@ -213,30 +214,7 @@ function App() {
                 ))}
             </tbody>
           </table>
-
-          {/* {isCompleteScreen === true &&
-            CompletedTodos.map((item, index) => {
-              return (
-                <>
-                  <div className="todo-list-item" key={index}>
-                    <h3>{item.title}</h3>
-
-                    <p>{item.description}</p>
-
-                    <p>
-                      <small>Completed on : {item.completedOn} </small>
-                    </p>
-                  </div>
-
-                  <div>
-                    <AiOutlineDelete
-                      className="icon"
-                      onClick={() => handleDeleteCompletedTodo(index)}
-                    />
-                  </div>
-                </>
-              );
-            })} */}
+        )}
         </div>
       </div>
     </div>
