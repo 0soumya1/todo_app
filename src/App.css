@@ -1,38 +1,157 @@
-.App {
+body{
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+h1{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-wrapper{
+  background-color: #353434;
+  padding: 2%;
+  width:fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 5px 7px rgb(41, 40, 40);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-input{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid rgb(78, 77, 77);
+  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-input-item{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-input-item label{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.todo-input-item input{
+  padding: 8px;
+  border: none;
+  width: 250px;
+  box-shadow: #353434;
+}
+
+.invalid-input {
+  color: red;
+  height: 3px;
+  margin-bottom: 20px ;
+  margin-right: 40px;
+ 
+}
+
+.primaryBtn{
+  background-color: rgb(36, 201, 243);
+  color: black;
+  border: none;
+  border-radius: 2px;
+  margin-top: 32px;
+  padding: 8px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.primaryBtn:hover{
+  background-color: rgb(95, 214, 243);
+}
+
+.btn-area{
+  margin-bottom: 10px;
+}
+
+.secondaryBtn{
+  background-color:  #f5f2f2;
+  color: black;
+  border: none;
+  border-radius: 0px;
+  margin-top: 25px;
+  padding: 10px;
+  width: fit-content;
+  cursor: pointer;  
+}
+
+.btn-area .active{
+  background-color: rgb(36, 201, 243);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table td, .table th{
+  padding: 2px 4px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.table th{
+  background-color: rgba(143, 143, 143, 0.568);
+}
+
+/* .todo-list-item{
+  background-color: #414041;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: #272627;
+}
+
+.todo-list-item h3{
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(36, 201, 243);
+  margin: 0px;
+}
+
+.todo-list-item p{
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgb(223, 222, 222);
+  
+} */
+
+.icon{
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.icon:hover{
+  color: red;
+}
+
+.check-icon{
+    font-size: 28px;
+    color: rgb(92, 255, 47);
+    cursor: pointer;
+    margin-left: 10px;
+   
+}
+
+.check-icon:hover{
+  color: rgb(3, 206, 111);
 }
