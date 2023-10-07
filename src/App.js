@@ -97,7 +97,7 @@ function App() {
               type="text"
               value={newTitle}
               onChange={(e) => setNewTitle(e.target.value)}
-              placeholder="Title of your to do"
+              placeholder="Title of your To-Do"
             />
           </div>
           <div>
@@ -112,7 +112,7 @@ function App() {
               type="text"
               value={newDescription}
               onChange={(e) => setNewDescription(e.target.value)}
-              placeholder="Description of your to do"
+              placeholder="Description of your To-Do"
             />
           </div>
           <div>
