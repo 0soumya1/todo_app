@@ -129,3 +129,40 @@ h1 {
 .check-icon:hover {
   color: rgb(3, 206, 111);
 }
+
+@media(max-width:360px){
+  .table{
+    font-size: smaller;
+  }
+  .icon{
+    font-size: x-small;
+  }
+  h1 {
+    text-align: center;
+  }
+}
+
+@media(max-width:328px){
+  .table{
+    font-size: x-small;
+  }
+  .icon{
+    font-size: x-small;
+  }
+  h1 {
+    text-align: center;
+  }
+}
+
+@media(max-width:292px){
+  .table{
+    font-size: xx-small;
+  }
+  .icon{
+    font-size: x-small;
+  }
+  h1 {
+    text-align: center;
+  }
+}
+
